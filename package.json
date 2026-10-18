@@ -1,0 +1,58 @@
+{
+  "name": "dsh-host-fs",
+  "version": "1.0.1",
+  "description": "Delete and move files from the DSH host process — including paths outside the workspace, where DSH's own fs tools have no delete and the sandboxed shell cannot write. Gated by a session allow/deny list and a path allow/deny list. · 在宿主进程里删除/移动文件，补上 DSH 文件工具没有的删除与工作区外 shell 写不进去的那一格；带会话闸门与路径闸门。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./guard": "./lib/guard.js",
+    "./client": "./client/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/guard.test.mjs && node test/settings.test.mjs && node test/client-syntax.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "harness",
+    "filesystem",
+    "remove",
+    "delete",
+    "move",
+    "host-process"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sniperdown/dsh-host-fs.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots",
+        "locale"
+      ]
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.4"
+  }
+}

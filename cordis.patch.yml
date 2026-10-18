@@ -1,0 +1,11 @@
+# dsh-host-fs 的 bundle patch。
+#
+# 声明在 package.json 的 dsh.bundle.patch 里；宿主读 dsh.bundle，用 bundlePatchPaths
+# 拼绝对路径，再 loadOverlayPatches 解析。
+#
+# 本文件必须保持「顶层 YAML 数组」形态，且不能是空文件或只有注释——
+# 那会让启动失败。没有条目时要写成 `[]`。
+
+- insert:
+    - id: dsh-host-fs
+      name: 'dsh-host-fs'

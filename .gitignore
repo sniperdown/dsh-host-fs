@@ -1,0 +1,8 @@
+node_modules/
+*.tgz
+.test-tmp/
+apply-diag.json
+*.log
+.npmrc
+publish.cmd
+test/

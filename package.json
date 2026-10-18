@@ -1,6 +1,6 @@
 {
   "name": "dsh-host-fs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Delete and move files from the DSH host process — including paths outside the workspace, where DSH's own fs tools have no delete and the sandboxed shell cannot write. Gated by a session allow/deny list and a path allow/deny list. · 在宿主进程里删除/移动文件，补上 DSH 文件工具没有的删除与工作区外 shell 写不进去的那一格；带会话闸门与路径闸门。",
   "type": "module",
   "main": "lib/index.js",

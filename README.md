@@ -4,6 +4,8 @@
 
 1. **Install**: `dsh plugin --profile <your profile> add dsh-host-fs` (or `github:sniperdown/dsh-host-fs`),
    then **restart DSH once**. Plugins are only imported at load time.
+   Tested against DSH **0.2.0-rc.2**. Older hosts lack the `settings.plugins.tab` slot, so the
+   settings page will not render (`fs_remove` / `fs_move` still work, configured via `cordis.patch.yml`).
 2. **Configure**: Settings → Plugins → the **Files** tab.
    - set the session mode to `allowlist` and tick the sessions allowed to use it
      (each row shows the session title and id, newest activity first)

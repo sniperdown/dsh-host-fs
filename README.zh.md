@@ -3,6 +3,8 @@
 ## 装上就能用（三步）
 
 1. **装**：`dsh plugin --profile <你的 profile> add dsh-host-fs`（或 `github:sniperdown/dsh-host-fs`），然后**重启一次 DSH**。
+   本插件在 DSH **0.2.0-rc.2** 上实测通过。更老的宿主没有 `settings.plugins.tab` 槽位，
+   设置页不会出现（`fs_remove` / `fs_move` 仍可用，但只能靠 `cordis.patch.yml` 配）。
    插件必须重启才会加载；改完配置也要重启或让它重载。
 2. **配**：设置 → 插件 → 顶部 **「文件权限」** 页。
    - 会话权限选 `白名单`，在列表里勾上允许使用它的会话（每行是「标题（会话 id）」，按最后活动时间排序）
